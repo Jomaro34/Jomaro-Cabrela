@@ -1,4 +1,4 @@
-const url = 'Dicionario.pdf';
+const url = 'https://upload.wikimedia.org/wikipedia/commons/2/24/Seres_Imaginarios_Jomaro_Cabrela_1Ed_2025.pdf';
 let pdfDoc = null,
     pageNum = 1,
     pageRendering = false,

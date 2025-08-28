@@ -3,73 +3,73 @@ let pdfDoc = null,
     pageNum = 1,
     pageRendering = false,
     pageNumPending = null,
-    scale = 1.5,
+    scale = 1.2,
     canvas = document.getElementById('pdf-render'),
     ctx = canvas.getContext('2d');
 
+async function renderPage(num) {
+    pageRendering = true;
+    try {
+        const page = await pdfDoc.getPage(num);
+        const viewport = page.getViewport({ scale: scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        const renderContext = { canvasContext: ctx, viewport: viewport };
+        await page.render(renderContext).promise;
+        pageRendering = false;
+        if (pageNumPending !== null) {
+            renderPage(pageNumPending);
+            pageNumPending = null;
+        }
+        document.getElementById('page-num').textContent = num;
+    } catch (err) {
+        alert('Erro ao renderizar a página: ' + err);
+    }
+}
+
+function queueRenderPage(num) {
+    if (pageRendering) pageNumPending = num;
+    else renderPage(num);
+}
+
 // Carregar PDF
 pdfjsLib.getDocument(url).promise.then(doc => {
-  pdfDoc = doc;
-  document.getElementById('page-count').textContent = pdfDoc.numPages;
-  renderPage(pageNum);
+    pdfDoc = doc;
+    document.getElementById('page-count').textContent = pdfDoc.numPages;
+    renderPage(pageNum);
+}).catch(err => {
+    alert('Erro ao carregar PDF: ' + err);
 });
 
-// Renderizar página
-function renderPage(num) {
-  pageRendering = true;
-  pdfDoc.getPage(num).then(page => {
-    let viewport = page.getViewport({ scale: scale });
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    let renderContext = { canvasContext: ctx, viewport: viewport };
-    let renderTask = page.render(renderContext);
-
-    renderTask.promise.then(() => {
-      pageRendering = false;
-      if (pageNumPending !== null) {
-        renderPage(pageNumPending);
-        pageNumPending = null;
-      }
-    });
-  });
-
-  document.getElementById('page-num').textContent = num;
-}
-
-// Navegar entre páginas
-function queueRenderPage(num) {
-  if (pageRendering) pageNumPending = num;
-  else renderPage(num);
-}
-
+// Navegação
 document.getElementById('prev-page').addEventListener('click', () => {
-  if (pageNum <= 1) return;
-  pageNum--;
-  queueRenderPage(pageNum);
+    if (pageNum <= 1) return;
+    pageNum--;
+    queueRenderPage(pageNum);
 });
 
 document.getElementById('next-page').addEventListener('click', () => {
-  if (pageNum >= pdfDoc.numPages) return;
-  pageNum++;
-  queueRenderPage(pageNum);
+    if (pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    queueRenderPage(pageNum);
 });
 
-// Pesquisa simples
+// Pesquisa
 document.getElementById('search-btn').addEventListener('click', async () => {
-  let term = document.getElementById('search').value.trim().toLowerCase();
-  if (!term) return alert('Escreva algo para pesquisar');
+    const term = document.getElementById('search').value.trim().toLowerCase();
+    if (!term) return alert('Escreva algo para pesquisar');
 
-  for (let i = 1; i <= pdfDoc.numPages; i++) {
-    let page = await pdfDoc.getPage(i);
-    let textContent = await page.getTextContent();
-    let textItems = textContent.items.map(item => item.str).join(' ').toLowerCase();
-    if (textItems.includes(term)) {
-      pageNum = i;
-      queueRenderPage(pageNum);
-      alert(`Palavra encontrada na página ${i}`);
-      return;
+    for (let i = 1; i <= pdfDoc.numPages; i++) {
+        const page = await pdfDoc.getPage(i);
+        const textContent = await page.getTextContent();
+        const textItems = textContent.items.map(item => item.str).join(' ').toLowerCase();
+        if (textItems.includes(term)) {
+            pageNum = i;
+            queueRenderPage(pageNum);
+            alert(`Palavra encontrada na página ${i}`);
+            return;
+        }
     }
-  }
-  alert('Palavra não encontrada');
+    alert('Palavra não encontrada');
 });
+

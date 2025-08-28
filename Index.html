@@ -1,63 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Artista - Jomaro Cabrela</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página do Artista — Jomaro Cabrela</title>
+  <!-- CSS embutido para facilitar testes. Se preferires, posso separar para style.css. -->
+  <style>
+    :root {
+      --bg: #0f1012;
+      --fg: #e8e8e8;
+      --muted: #b9bcc2;
+      --card: #17181b;
+      --line: #2a2d32;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; height: 100%; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    header { max-width: 1100px; margin: 40px auto 16px; padding: 0 16px; }
+    header h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); }
+    .bio { margin: 0; color: var(--muted); line-height: 1.6; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 0 16px 64px; }
+    .section-title { margin: 32px 0 12px; font-size: clamp(20px, 3vw, 28px); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+      outline-offset: 3px;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    .card h2 { font-size: 18px; margin: 12px 12px 6px; }
+    .card p { margin: 0 12px 14px; color: var(--muted); }
+    .card__img { width: 100%; height: 180px; object-fit: cover; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 32px; }
+    footer p { max-width: 1100px; margin: 10px auto; padding: 0 16px 10px; color: var(--muted); }
+  </style>
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
-    <h1><a href="#">Jomaro Cabrela</a></h1>
-    <p class="bio">Artista, autodidacta, natural de Cinfães - Portugal, nascido a 19 de Janeiro de 1960.<br>
-    Expõe desde 1982. Actualmente reside em Rio Tinto - Portugal.</p>
+    <h1>Jomaro Cabrela</h1>
+    <p class="bio">Artista, autodidacta, natural de Cinfães — Portugal, nascido a 19 de Janeiro de 1960.<br>
+    Expõe desde 1982. Actualmente reside em Rio Tinto — Portugal.</p>
   </header>
 
   <!-- Secções principais -->
   <main>
-    <section class="grid">
-      <a href="#" class="card">
-        <img src="Dicionario.jpg" alt="Dicionário de Cinfães">
-        <h2>Dicionário de Cinfães</h2>
-        <p>Subtítulo</p>
-      </a>
-      <a href="#" class="card">
-        <img src="Proverbios.jpg" alt="Provérbios">
-        <h2>Provérbios</h2>
-        <p>Subtítulo</p>
-      </a>
-      <a href="#" class="card">
-        <img src="SeresImaginarios.jpg" alt="Seres Imaginários">
-        <h2>Seres Imaginários</h2>
-        <p>Subtítulo</p>
-      </a>
+    <section aria-labelledby="principais">
+      <h2 id="principais" class="section-title">Trabalhos Principais</h2>
+      <div class="grid">
+        <a href="#" class="card" aria-label="Abrir Dicionário de Cinfães">
+          <img class="card__img" src="Dicionario.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Capa do projecto Dicionário de Cinfães">
+          <h2>Dicionário de Cinfães</h2>
+          <p>Subtítulo</p>
+        </a>
+        <a href="#" class="card" aria-label="Abrir Provérbios">
+          <img class="card__img" src="Proverbios.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Capa do projecto Provérbios">
+          <h2>Provérbios</h2>
+          <p>Subtítulo</p>
+        </a>
+        <a href="#" class="card" aria-label="Abrir Seres Imaginários">
+          <img class="card__img" src="SeresImaginarios.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Capa do projecto Seres Imaginários">
+          <h2>Seres Imaginários</h2>
+          <p>Subtítulo</p>
+        </a>
+      </div>
     </section>
 
-    <h2 class="section-title">Projectos Diversos</h2>
-    <section class="grid">
-      <a href="#" class="card">
-        <img src="Galeria1.jpg" alt="Galeria 1">
-        <h2>Galeria 1</h2>
-        <p>Subtítulo</p>
-      </a>
-      <a href="#" class="card">
-        <img src="Galeria12.jpg" alt="Galeria 2">
-        <h2>Galeria 2</h2>
-        <p>Subtítulo</p>
-      </a>
-      <a href="#" class="card">
-        <img src="Galeria3.jpg" alt="Galeria 3">
-        <h2>Galeria 3</h2>
-        <p>Subtítulo</p>
-      </a>
+    <section aria-labelledby="diversos">
+      <h2 id="diversos" class="section-title">Projectos Diversos</h2>
+      <div class="grid">
+        <a href="#" class="card" aria-label="Abrir Galeria 1">
+          <img class="card__img" src="Galeria1.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Miniatura da Galeria 1">
+          <h2>Galeria 1</h2>
+          <p>Subtítulo</p>
+        </a>
+        <a href="#" class="card" aria-label="Abrir Galeria 2">
+          <!-- Corrigido possível lapso no nome do ficheiro: de Galeria12.jpg para Galeria2.jpg -->
+          <img class="card__img" src="Galeria2.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Miniatura da Galeria 2">
+          <h2>Galeria 2</h2>
+          <p>Subtítulo</p>
+        </a>
+        <a href="#" class="card" aria-label="Abrir Galeria 3">
+          <img class="card__img" src="Galeria3.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Miniatura da Galeria 3">
+          <h2>Galeria 3</h2>
+          <p>Subtítulo</p>
+        </a>
+      </div>
     </section>
   </main>
 
   <!-- Rodapé -->
   <footer>
-    <p>© Jomaro Cabrela / José Rodrigues</p>
+    <p>© <time datetime="2025">2025</time> Jomaro Cabrela / José Rodrigues</p>
     <p>Todos os textos apresentados estão escritos em português europeu, respeitando a grafia anterior ao Acordo Ortográfico de 1990.</p>
   </footer>
 </body>
 </html>
+

@@ -5,16 +5,24 @@ body {
   line-height: 1.6;
 }
 
+/* margem mínima no telemóvel */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+}
+
 header, footer {
   text-align: center;
   padding: 20px;
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 300px; /* antes era 200px, agora aumentei */
   height: auto;
 }
 
+/* todas as imagens */
 img {
   max-width: 100%;
   height: auto;
@@ -22,9 +30,17 @@ img {
   margin: 0 auto;
 }
 
+/* imagem principal (quadro) */
 .featured img {
   max-width: 90%;
   margin: 10px auto;
+}
+
+/* texto do quadro */
+.featured p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 .cards {

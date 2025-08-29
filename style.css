@@ -32,6 +32,7 @@ header .logo {
 main .bio {
   margin: 20px auto;
   max-width: 800px;
+  padding: 0 10px; /* garante margem mínima em telemóveis */
 }
 
 main .bio p {
@@ -42,18 +43,22 @@ main .bio p {
 /* Featured / quadro */
 .featured {
   margin: 20px auto;
+  padding: 0 10px; /* margem mínima lateral em telemóveis */
 }
 
 .featured img {
+  width: 100%;
   max-width: 400px;
-  width: 90%;
+  height: auto;
   border-radius: 8px;
-  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 .featured p {
   font-weight: bold;
   font-size: 1.2em;
+  margin-top: 10px;
 }
 
 /* Galeria de cards */
@@ -105,7 +110,7 @@ footer .portrait {
 /* Responsivo / telemóveis */
 @media (max-width: 600px) {
   .featured img {
-    width: 95%;
+    width: 100%;
   }
 
   .cards {
@@ -118,5 +123,3 @@ footer .portrait {
     margin: 0 auto;
   }
 }
-
-

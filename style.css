@@ -1,27 +1,62 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset básico */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   background: #fff;
   color: #222;
+}
+
+/* Centraliza textos principais */
+header, main .bio, .featured, footer {
   text-align: center;
 }
+
+/* Header */
 header {
   padding: 20px;
 }
+
 header .logo {
   max-width: 250px;
   height: auto;
+  margin-top: 10px;
 }
+
+/* Bio */
 main .bio {
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 800px;
 }
+
+main .bio p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Featured / quadro */
+.featured {
+  margin: 20px auto;
+}
+
 .featured img {
   max-width: 400px;
-  width: 100%;
+  width: 90%;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
+
+.featured p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Galeria de cards */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -30,27 +65,58 @@ main .bio {
   max-width: 1000px;
   margin: auto;
 }
+
 .card {
   background: #f9f9f9;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
 }
+
 .card img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
 }
+
 .card h3 {
   margin: 10px 0 5px;
 }
+
+.card p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Footer */
 footer {
   margin-top: 40px;
   padding: 20px;
   background: #f0f0f0;
 }
+
 footer .portrait {
   max-width: 80px;
   border-radius: 50%;
+  margin-bottom: 10px;
 }
+
+/* Responsivo / telemóveis */
+@media (max-width: 600px) {
+  .featured img {
+    width: 95%;
+  }
+
+  .cards {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 

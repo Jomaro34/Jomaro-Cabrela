@@ -29,10 +29,14 @@ header img.logo {
 
 /* Bio */
 .bio {
-  text-align: center;
+  text-align: center; /* força centralização */
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.bio p {
+  text-align: center; /* garante centralização dos parágrafos */
 }
 
 /* Featured */
@@ -117,5 +121,3 @@ footer img.portrait {
     gap: 10px;
   }
 }
-
-

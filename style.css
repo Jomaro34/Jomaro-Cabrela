@@ -32,7 +32,7 @@ header .logo {
 main .bio {
   margin: 20px auto;
   max-width: 800px;
-  padding: 0 10px; /* garante margem mínima em telemóveis */
+  padding: 0 15px; /* margem mínima lateral em telemóveis */
 }
 
 main .bio p {
@@ -43,12 +43,14 @@ main .bio p {
 /* Featured / quadro */
 .featured {
   margin: 20px auto;
-  padding: 0 10px; /* margem mínima lateral em telemóveis */
+  padding: 0 15px; /* margem mínima lateral em telemóveis */
+  max-width: 100%;  /* evita overflow */
+  text-align: center;
 }
 
 .featured img {
-  width: 100%;
-  max-width: 400px;
+  width: 100%;       /* ocupa largura do contêiner */
+  max-width: 400px;  /* limita no desktop */
   height: auto;
   border-radius: 8px;
   display: block;
@@ -59,6 +61,8 @@ main .bio p {
   font-weight: bold;
   font-size: 1.2em;
   margin-top: 10px;
+  text-align: center; /* centraliza o nome do quadro */
+  word-wrap: break-word; /* evita overflow de textos longos */
 }
 
 /* Galeria de cards */

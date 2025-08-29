@@ -3,54 +3,50 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #fff;
-  color: #222;
-  text-align: center;
 }
-header {
+
+header, footer {
+  text-align: center;
   padding: 20px;
 }
-header .logo {
-  max-width: 250px;
+
+.logo {
+  max-width: 200px;
   height: auto;
 }
-main .bio {
-  margin: 20px;
-}
-.featured img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 8px;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-.card {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-.card img {
+
+img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
 }
-.card h3 {
-  margin: 10px 0 5px;
+
+.featured img {
+  max-width: 90%;
+  margin: 10px auto;
 }
-footer {
-  margin-top: 40px;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   padding: 20px;
-  background: #f0f0f0;
 }
-footer .portrait {
-  max-width: 80px;
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  border-radius: 5px;
+}
+
+footer img {
+  max-width: 150px;
   border-radius: 50%;
 }
 

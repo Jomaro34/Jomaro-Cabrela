@@ -1,139 +1,97 @@
-Aqui está a estrutura mínima para GitHub Pages. Basta criares estas pastas e ficheiros no teu repositório, fazer commit e push:
-
-```
-📂 teu-repositorio/
-│
-├── 📄 index.html
-├── 📄 style.css
-└── 📂 img/
-    ├── Dicionario.jpg
-    ├── Proverbios.jpg
-    ├── SeresImaginarios.jpg
-    ├── Galeria1.jpg
-    ├── Galeria2.jpg
-    └── Galeria3.jpg
-```
-
-### index.html
-```html
-<!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página do Artista — Jomaro Cabrela</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <h1>Jomaro Cabrela</h1>
-    <p class="bio">Artista, autodidacta, natural de Cinfães — Portugal, nascido a 19 de Janeiro de 1960.<br>
-    Expõe desde 1982. Actualmente reside em Rio Tinto — Portugal.</p>
-  </header>
-
-  <!-- Secções principais -->
-  <main>
-    <section>
-      <h2 class="section-title">Trabalhos Principais</h2>
-      <div class="grid">
-        <a href="#" class="card">
-          <img src="img/Dicionario.jpg" alt="Capa do projecto Dicionário de Cinfães">
-          <h2>Dicionário de Cinfães</h2>
-          <p>Subtítulo</p>
-        </a>
-        <a href="#" class="card">
-          <img src="img/Proverbios.jpg" alt="Capa do projecto Provérbios">
-          <h2>Provérbios</h2>
-          <p>Subtítulo</p>
-        </a>
-        <a href="#" class="card">
-          <img src="img/SeresImaginarios.jpg" alt="Capa do projecto Seres Imaginários">
-          <h2>Seres Imaginários</h2>
-          <p>Subtítulo</p>
-        </a>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">Projectos Diversos</h2>
-      <div class="grid">
-        <a href="#" class="card">
-          <img src="img/Galeria1.jpg" alt="Miniatura da Galeria 1">
-          <h2>Galeria 1</h2>
-          <p>Subtítulo</p>
-        </a>
-        <a href="#" class="card">
-          <img src="img/Galeria2.jpg" alt="Miniatura da Galeria 2">
-          <h2>Galeria 2</h2>
-          <p>Subtítulo</p>
-        </a>
-        <a href="#" class="card">
-          <img src="img/Galeria3.jpg" alt="Miniatura da Galeria 3">
-          <h2>Galeria 3</h2>
-          <p>Subtítulo</p>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>© <time datetime="2025">2025</time> Jomaro Cabrela / José Rodrigues</p>
-    <p>Todos os textos apresentados estão escritos em português europeu, respeitando a grafia anterior ao Acordo Ortográfico de 1990.</p>
-  </footer>
-</body>
-</html>
-```
-
-### style.css
-```css
-:root {
-  --bg: #0f1012;
-  --fg: #e8e8e8;
-  --muted: #b9bcc2;
-  --card: #17181b;
-  --line: #2a2d32;
-}
-
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; height: 100%; }
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--fg);
-}
-
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; height: auto; display: block; }
-
-header { max-width: 1100px; margin: 40px auto 16px; padding: 0 16px; }
-header h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); }
-.bio { margin: 0; color: var(--muted); line-height: 1.6; }
-
-main { max-width: 1100px; margin: 0 auto; padding: 0 16px 64px; }
-.section-title { margin: 32px 0 12px; font-size: clamp(20px, 3vw, 28px); }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
-.card h2 { font-size: 18px; margin: 12px 12px 6px; }
-.card p { margin: 0 12px 14px; color: var(--muted); }
-.card img { width: 100%; height: 180px; object-fit: cover; }
-
-footer { border-top: 1px solid var(--line); margin-top: 32px; }
-footer p { max-width: 1100px; margin: 10px auto; padding: 0 16px 10px; color: var(--muted); }
-```
-
-👉 Sobe isto para o teu repositório, confirma em **Settings → Pages** que a branch e a pasta estão certas, e o site ficará acessível. 🚀
-
+<!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
+<h2 style="text-align: center;">Jomaro<strong>Cabrela</strong></h2>
+<p style="font-size: 1.5em;"><img style="display: block; margin-left: auto; margin-right: auto;" src="/JomaroCabrelaNome.gif" alt="" /></p>
+<p style="font-size: 1.5em; text-align: center;"><span style="font-size: 14px;"><a title="Nome da imagem" href="https://upload.wikimedia.org/wikipedia/commons/a/aa/Thomas_J_Hudner_1950.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Thomas_J_Hudner_1950.jpg" alt="" width="52" height="92" /></a></span></p>
+<p style="text-align: center;">Artista, autodidacta, natural de Cinf&atilde;es - Portugal, nascido a 19 de Janeiro de 1960.<br />Exp&otilde;e desde 1982. Actualmente reside em Rio Tinto - Portugal.</p>
+<p style="font-size: 1.5em; text-align: center;"><a href="https://jomaro34.github.io/dicionario-cinfaes/"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Pombal1.jpg" alt="" width="342" height="171" /></a></p>
+<p style="text-align: center;">nome quadro</p>
+<table style="margin-left: auto; margin-right: auto; height: 522px; width: 359.922px;">
+<tbody>
+<tr>
+<td style="width: 161px; text-align: center;">Projectos</td>
+<td style="width: 181.922px; text-align: center;">Galerias</td>
+</tr>
+<tr>
+<td style="width: 161px;"><a href="https://jomaro34.github.io/dicionario-cinfaes/"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Pombal1.jpg" alt="" width="100" height="50" /></a></td>
+<td style="width: 181.922px;"><a href="https://www.facebook.com/jomarocabrelaarte/"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Pombal1.jpg" alt="" width="100" height="50" /></a></td>
+</tr>
+<tr>
+<td style="width: 161px; text-align: center;">
+<p><span style="text-decoration: underline;"><a href="https://jomaro34.github.io/dicionario-cinfaes/">&nbsp;<strong>Dicion&aacute;rio</strong></a></span></p>
+<p><span style="text-decoration: underline;"><a href="https://jomaro34.github.io/dicionario-cinfaes/">subt&iacute;tulo</a></span></p>
+</td>
+<td style="width: 181.922px; text-align: center;">
+<p><strong>&nbsp;<a href="https://www.facebook.com/jomarocabrelaarte/">Galeria </a></strong></p>
+<p><a href="https://www.facebook.com/jomarocabrelaarte/">1</a></p>
+</td>
+</tr>
+<tr>
+<td style="width: 161px;">&nbsp;</td>
+<td style="text-align: center; width: 181.922px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 161px;"><a href="https://jomaro34.github.io/Proverbios-Ditados/"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Pombal1.jpg" alt="" width="100" height="50" /></a></td>
+<td style="text-align: center; width: 181.922px;"><a href="https://www.facebook.com/jomaro.cabrela/"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Pombal1.jpg" alt="" width="100" height="50" /></a></td>
+</tr>
+<tr>
+<td style="width: 161px; text-align: center;">
+<p><a href="https://jomaro34.github.io/Proverbios-Ditados/"><strong>&nbsp;Prov&eacute;rbios</strong></a></p>
+<p><a href="https://jomaro34.github.io/Proverbios-Ditados/">subt&iacute;tulo</a></p>
+</td>
+<td style="text-align: center; width: 181.922px;">
+<p><a href="https://www.facebook.com/jomaro.cabrela/">&nbsp;<strong>Galeria </strong></a></p>
+<p><a href="https://www.facebook.com/jomaro.cabrela/">2&nbsp;</a></p>
+</td>
+</tr>
+<tr>
+<td style="width: 161px;">&nbsp;</td>
+<td style="text-align: center; width: 181.922px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 161px;"><a href="https://upload.wikimedia.org/wikipedia/commons/2/24/Seres_Imaginarios_Jomaro_Cabrela_1Ed_2025.pdf?fbclid=IwY2xjawMeQXhleHRuA2FlbQIxMABicmlkETFKQmFWN0dGdm9GMjRLNmJMAR7gGqB3upsWKEkW0hgZEFuFo_pXpHKmPvMkdZ49tbmO0aEiymFKxS7xZxDc-Q_aem_AX6zIm4IiXVa2zgff0uCNA"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Pombal1.jpg" alt="" width="100" height="50" /></a></td>
+<td style="text-align: center; width: 181.922px;"><a href="https://www.facebook.com/groups/jomarocabrelaomeuolharsobreomundo"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Pombal1.jpg" alt="" width="100" height="50" /></a>&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 161px;">
+<p style="text-align: center;">&nbsp;<a href="https://upload.wikimedia.org/wikipedia/commons/2/24/Seres_Imaginarios_Jomaro_Cabrela_1Ed_2025.pdf?fbclid=IwY2xjawMeQXhleHRuA2FlbQIxMABicmlkETFKQmFWN0dGdm9GMjRLNmJMAR7gGqB3upsWKEkW0hgZEFuFo_pXpHKmPvMkdZ49tbmO0aEiymFKxS7xZxDc-Q_aem_AX6zIm4IiXVa2zgff0uCNA"><strong>Seres Imagin&aacute;rios</strong></a></p>
+<p style="text-align: center;"><a href="https://upload.wikimedia.org/wikipedia/commons/2/24/Seres_Imaginarios_Jomaro_Cabrela_1Ed_2025.pdf?fbclid=IwY2xjawMeQXhleHRuA2FlbQIxMABicmlkETFKQmFWN0dGdm9GMjRLNmJMAR7gGqB3upsWKEkW0hgZEFuFo_pXpHKmPvMkdZ49tbmO0aEiymFKxS7xZxDc-Q_aem_AX6zIm4IiXVa2zgff0uCNA">sub titulo</a></p>
+</td>
+<td style="text-align: center; width: 181.922px;">
+<p><a href="https://www.facebook.com/groups/jomarocabrelaomeuolharsobreomundo"><strong>O meu olhar</strong></a></p>
+<p><a href="https://www.facebook.com/groups/jomarocabrelaomeuolharsobreomundo">sobre o mundo</a></p>
+</td>
+</tr>
+<tr>
+<td style="width: 161px;">&nbsp;</td>
+<td style="text-align: center; width: 181.922px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 161px; text-align: center;"><a href="https://www.facebook.com/groups/851611723593866">Diversos</a></td>
+<td style="text-align: center; width: 181.922px;"><a href="https://www.facebook.com/groups/851611723593866">Outros</a></td>
+</tr>
+<tr>
+<td style="width: 161px; text-align: center;"><a href="https://www.facebook.com/groups/851611723593866">diversos 2</a></td>
+<td style="text-align: center; width: 181.922px;"><a href="https://www.facebook.com/groups/851611723593866">Outros 2</a></td>
+</tr>
+</tbody>
+</table>
+<table style="height: 10px;" width="617">
+<tbody>
+<tr>
+<td style="width: 607px; text-align: center;">_________________________________________________</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"><a title="Nome da imagem" href="https://upload.wikimedia.org/wikipedia/commons/a/aa/Thomas_J_Hudner_1950.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Thomas_J_Hudner_1950.jpg" alt="" width="52" height="92" /></a></p>
+<p style="text-align: center;">&copy; Jomaro Cabrela / Jos&eacute; Rodrigues</p>
+<p style="text-align: center;">Artista, autodidacta, natural de Cinf&atilde;es - Portugal, nasceu a 19 de Janeiro de 1960.</p>
+<p style="text-align: center;">Exp&otilde;e desde 1982. Actualmente reside em Rio Tinto - Portugal</p>
+<table style="height: 8px;" width="629">
+<tbody>
+<tr>
+<td style="width: 619px; text-align: center;">_________________</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">Todos os textos apresentados est&atilde;o escritos em portugu&ecirc;s europeu, respeitando a grafia anterior ao Acordo Ortogr&aacute;fico de 1990.</p>
+<p style="text-align: center;">&nbsp;</p>

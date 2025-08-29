@@ -24,6 +24,7 @@ header {
 
 header .logo {
   max-width: 250px;
+  width: 80%;
   height: auto;
   margin-top: 10px;
 }
@@ -32,7 +33,7 @@ header .logo {
 main .bio {
   margin: 20px auto;
   max-width: 800px;
-  padding: 0 15px; /* margem mínima lateral em telemóveis */
+  padding: 0 15px;
 }
 
 main .bio p {
@@ -42,15 +43,13 @@ main .bio p {
 
 /* Featured / quadro */
 .featured {
-  margin: 20px auto;
-  padding: 0 15px; /* margem mínima lateral em telemóveis */
-  max-width: 100%;  /* evita overflow */
-  text-align: center;
+  margin: 30px auto;
+  padding: 0 15px; /* margem mínima lateral */
+  max-width: 400px; /* largura máxima desktop */
 }
 
 .featured img {
-  width: 100%;       /* ocupa largura do contêiner */
-  max-width: 400px;  /* limita no desktop */
+  width: 100%;      /* ocupa todo o contêiner */
   height: auto;
   border-radius: 8px;
   display: block;
@@ -61,8 +60,7 @@ main .bio p {
   font-weight: bold;
   font-size: 1.2em;
   margin-top: 10px;
-  text-align: center; /* centraliza o nome do quadro */
-  word-wrap: break-word; /* evita overflow de textos longos */
+  text-align: center; /* centraliza o nome */
 }
 
 /* Galeria de cards */
@@ -113,8 +111,9 @@ footer .portrait {
 
 /* Responsivo / telemóveis */
 @media (max-width: 600px) {
-  .featured img {
-    width: 100%;
+  .featured {
+    max-width: 100%; /* permite ocupar quase toda a tela */
+    padding: 0 15px;
   }
 
   .cards {
@@ -123,7 +122,7 @@ footer .portrait {
   }
 
   .card {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 }

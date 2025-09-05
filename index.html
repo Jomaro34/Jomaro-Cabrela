@@ -95,31 +95,32 @@
   </p>
   <p style="text-align: center;">
     <a href="mailto:jomarocabrela@gmail.com">&copy; Jomaro Cabrela</a>
-      <p style="text-align: center;">
+  </p>
+  <p style="text-align: center;">
     <a href="mailto:jomarocabrela@gmail.com">jomarocabrela@gmail.com</a> 
   </p>
+
   <table style="height: 18px; margin-left: auto; margin-right: auto;" width="300">
     <tbody>
       <tr>
         <td style="width: 88px; text-align: center;">
-          <a href="https://www.facebook.com/jomaro.cabrela/"><img src="FaceBook.jpg" alt="" width="30" height="30" /></a>&nbsp; &nbsp;&nbsp;
+          <a href="https://www.facebook.com/jomaro.cabrela/"><img src="FaceBook.jpg" alt="" width="30" height="30" /></a>
         </td>
         <td style="width: 88px; text-align: center;">
-          <a href="https://www.facebook.com/jomarocabrelaarte/"><img src="FaceBook.jpg" alt="" width="30" height="30" /></a>&nbsp; &nbsp;&nbsp;
+          <a href="https://www.facebook.com/jomarocabrelaarte/"><img src="FaceBook.jpg" alt="" width="30" height="30" /></a>
         </td>
         <td style="width: 88px; text-align: center;">
-          <a href="https://www.instagram.com/jomarocabrela/"><img src="Instagram.jpg" alt="" width="30" height="30" /></a>&nbsp; &nbsp;&nbsp;
+          <a href="https://www.instagram.com/jomarocabrela/"><img src="Instagram.jpg" alt="" width="30" height="30" /></a>
         </td>
         <td style="width: 88px; text-align: center;">
-          <a href="https://pt.pinterest.com/jcabrela/"><img src="Pinterest.jpg" alt="" width="30" height="30" /></a>&nbsp; &nbsp;&nbsp;
+          <a href="https://pt.pinterest.com/jcabrela/"><img src="Pinterest.jpg" alt="" width="30" height="30" /></a>
         </td>
         <td style="width: 88px; text-align: center;">
-          <a href="https://x.com/JCabrela"><img src="X.jpg" alt="" width="30" height="30" /></a>&nbsp; &nbsp;&nbsp;
+          <a href="https://x.com/JCabrela"><img src="X.jpg" alt="" width="30" height="30" /></a>
         </td>
-      </td>
-      <td style="width: 88px; text-align: center;">
-        <a href="mailto:jomarocabrela@gmail.com"><img src="Mail_Branco.jpg" alt="" width="30" height="30" /></a>&nbsp; &nbsp;&nbsp;
-      </td>
+        <td style="width: 88px; text-align: center;">
+          <a href="mailto:jomarocabrela@gmail.com"><img src="Mail_Branco.jpg" alt="" width="30" height="30" /></a>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -127,22 +128,22 @@
   <footer>
     <p>Todos os textos apresentados estão escritos em português europeu, respeitando a grafia anterior ao Acordo Ortográfico de 1990.</p>
 
-    <!-- Contador de visitas visível -->
-    <p style="text-align: center;">
-      Este site já teve <span id="visitas"></span> visitas.
+    <!-- Contador de visitas discreto -->
+    <p style="text-align: center; font-size: 0.8em; color: gray; margin-top: 10px;">
+      Visitas: <span id="visitas">0</span>
     </p>
   </footer>
 
   <!-- Script contador público com CountAPI -->
   <script>
-    // chave única para o teu site
-    const contador = "jomaro-cabrela-site-visitas";
-
-    fetch(`https://api.countapi.xyz/hit/${contador}`)
+    // namespace = jomaro, key = cabrela
+    fetch("https://api.countapi.xyz/hit/jomaro/cabrela")
       .then(res => res.json())
       .then(res => {
         document.getElementById("visitas").innerText = res.value;
-      });
+      })
+      .catch(err => console.error("Erro no contador:", err));
   </script>
 </body>
 </html>
+

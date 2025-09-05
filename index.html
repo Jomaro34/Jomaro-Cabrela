@@ -6,7 +6,7 @@
   <title>Jomaro Cabrela</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Counter.dev Analytics -->
+  <!-- Counter.dev Analytics (estatísticas privadas) -->
   <script src="https://cdn.counter.dev/script.js"
           data-id="e7a29e89-effa-49c1-8723-d4f954930e9a"
           data-utcoffset="1"></script>
@@ -126,6 +126,23 @@
 
   <footer>
     <p>Todos os textos apresentados estão escritos em português europeu, respeitando a grafia anterior ao Acordo Ortográfico de 1990.</p>
+
+    <!-- Contador de visitas visível -->
+    <p style="text-align: center;">
+      Este site já teve <span id="visitas"></span> visitas.
+    </p>
   </footer>
 
+  <!-- Script contador público com CountAPI -->
+  <script>
+    // chave única para o teu site
+    const contador = "jomaro-cabrela-site-visitas";
 
+    fetch(`https://api.countapi.xyz/hit/${contador}`)
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById("visitas").innerText = res.value;
+      });
+  </script>
+</body>
+</html>

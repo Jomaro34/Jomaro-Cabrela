@@ -135,15 +135,10 @@
     <p>Todos os textos apresentados estão escritos em português europeu, respeitando a grafia anterior ao Acordo Ortográfico de 1990.</p>
   </footer>
 
-  <!-- Script para imagem aleatória no logo -->
+  <!-- Script para imagem aleatória no logo (16 imagens) -->
   <script>
-    // Número de imagens disponíveis na pasta Quadros
-    const totalImagens = 5; // se tiveres 1.webp, 2.webp ... 5.webp
-
-    // Gera número aleatório entre 1 e totalImagens
+    const totalImagens = 16; // temos 1.webp até 16.webp na pasta Quadros
     const numeroAleatorio = Math.floor(Math.random() * totalImagens) + 1;
-
-    // Define o src da imagem
     document.getElementById('logo').src = `Quadros/${numeroAleatorio}.webp`;
   </script>
 </body>

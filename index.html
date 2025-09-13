@@ -8,76 +8,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png?v=2" sizes="32x32">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #000;
-    }
-
-    header {
-      text-align: center;
-      padding: 1rem;
-    }
-
-    header .logo {
-      max-width: 450px;
-      width: 100%;
-      height: auto;
-    }
-
-    .bio {
-      text-align: center;
-      margin: 1rem;
-    }
-
-    .featured-container {
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .card {
-      text-align: center;
-      background: #f8f8f8;
-      border-radius: 12px;
-      padding: 0.5rem;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .card h4 {
-      margin: 0.5rem 0 0 0;
-      font-size: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: #f0f0f0;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
   <!-- Counter.dev Analytics -->
   <script src="https://cdn.counter.dev/script.js"
@@ -87,7 +19,7 @@
 <body>
   <header>
     <h1></h1>
-    <img src="JomaroCabrelaNome.jpg" alt="Nome Jomaro Cabrela" class="logo">
+    <img id="logo" alt="Nome Jomaro Cabrela" class="logo">
   </header>
 
   <main>
@@ -143,7 +75,7 @@
       </div>
       <div class="card">
         <a href="https://jomaro34.github.io/Jomaro-Cabrela-Galeria-Diversos-I">
-          <img src="Galeria_Diversos_I.png" alt="Galeria Galeria_Diversos_I">
+          <img src="Galeria_Diversos_I.png" alt="Galeria Diversos I">
           <h4>J. Cabrela</h4>
           <p>Galeria Diversos I</p>
         </a>
@@ -163,6 +95,7 @@
     </section>
   </main>
 
+  <!-- Foto do autor -->
   <p style="text-align: center;">
     <a href="https://jomaro34.github.io/Jomaro-Cabrela/">
       <img src="Eu.jpg" alt="" width="80" height="110" />
@@ -172,6 +105,7 @@
     <a href="https://jomaro34.github.io/Jomaro-Cabrela/">&copy; Jomaro Cabrela / José Rodrigues</a>
   </p>
 
+  <!-- Redes sociais -->
   <table style="height: 18px; margin-left: auto; margin-right: auto;" width="300">
     <tbody>
       <tr>
@@ -200,5 +134,18 @@
   <footer>
     <p>Todos os textos apresentados estão escritos em português europeu, respeitando a grafia anterior ao Acordo Ortográfico de 1990.</p>
   </footer>
+
+  <!-- Script para imagem aleatória no logo -->
+  <script>
+    // Número de imagens disponíveis na pasta Quadros
+    const totalImagens = 5; // se tiveres 1.webp, 2.webp ... 5.webp
+
+    // Gera número aleatório entre 1 e totalImagens
+    const numeroAleatorio = Math.floor(Math.random() * totalImagens) + 1;
+
+    // Define o src da imagem
+    document.getElementById('logo').src = `Quadros/${numeroAleatorio}.webp`;
+  </script>
 </body>
 </html>
+

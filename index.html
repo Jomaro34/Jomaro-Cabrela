@@ -19,7 +19,7 @@
 <body>
   <header>
     <h1></h1>
-    <img id="logo" alt="Nome Jomaro Cabrela" class="logo">
+    <img src="JomaroCabrelaNome.jpg" alt="Nome Jomaro Cabrela" class="logo">
   </header>
 
   <main>
@@ -32,7 +32,7 @@
     <!-- Featured -->
     <section class="featured">
       <div class="featured-container">
-        <img src="Quadro.jpg" alt="Quadro de Jomaro Cabrela">
+        <img id="quadro" src="Quadro.jpg" alt="Quadro de Jomaro Cabrela">
         <p>Intranquilidade</p>
       </div>
     </section>
@@ -135,12 +135,13 @@
     <p>Todos os textos apresentados estão escritos em português europeu, respeitando a grafia anterior ao Acordo Ortográfico de 1990.</p>
   </footer>
 
-  <!-- Script para imagem aleatória no logo (16 imagens) -->
+  <!-- Script para alterar aleatoriamente a imagem do quadro -->
   <script>
-    const totalImagens = 16; // temos 1.webp até 16.webp na pasta Quadros
-    const numeroAleatorio = Math.floor(Math.random() * totalImagens) + 1;
-    document.getElementById('logo').src = `Quadros/${numeroAleatorio}.webp`;
+    const totalQuadros = 16; // imagens 1.webp até 16.webp
+    const numeroAleatorio = Math.floor(Math.random() * totalQuadros) + 1;
+    document.getElementById('quadro').src = `Quadros/${numeroAleatorio}.webp`;
   </script>
 </body>
 </html>
+
 
